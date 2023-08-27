@@ -1,0 +1,28 @@
+#root {
+  width: 100vw;
+  font-size: 16px;
+}
+.container {
+  margin: auto;
+  display:flex;
+  justify-content: space-around;
+}
+.rightside {
+  flex-basis: 55%;
+}
+
+.leftside {
+  display: grid;
+  flex-basis: 30%;
+  gap: 3vh;
+}
+.personalInfo, .rightside, .jobInfo, .eduInfo {
+  border: thin solid black;
+  padding: 2vw;
+}
+.jobtitle, .edutitle {
+  background: rgba(0, 55, 111, 0.4);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1vh;
+}
