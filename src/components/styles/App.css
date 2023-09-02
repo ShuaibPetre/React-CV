@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "my-font";
+  src: local("my-font"),
+  url("./fonts/my-font.ttf") format("truetype");
+  font-weight: 400;
+ }
+ .font-face-gm {
+  font-family: "my-font";
+}
+
 #root {
   width: 100vw;
   font-size: 16px;
@@ -5,24 +15,144 @@
 .container {
   margin: auto;
   display:flex;
-  justify-content: space-around;
-}
-.rightside {
-  flex-basis: 55%;
+  justify-content: space-between;
+  background-color: rgb(241, 241, 241);
+  padding: 1.5vw;
+  gap: 3vw;
 }
 
-.leftside {
-  display: grid;
-  flex-basis: 30%;
-  gap: 3vh;
+.cv {
+  width: auto;
+  margin: 0;
+  background-color: white;
+  padding: 5vw;
 }
-.personalInfo, .rightside, .jobInfo, .eduInfo {
-  border: thin solid black;
+.optionside {
+  flex-basis: 5%;
+}
+.leftside {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.rightside {
+ flex-basis: 60%
+}
+/* FORM STYLING */
+input, textarea {
+  background: rgba(229, 228, 226, 0.4);
+  width: 90%;
+  border: none;
+  border-radius: 8%;
+  padding: 8px;
+  margin: 4px;
+  font-size: 0.8rem
+}
+label, .labelText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1vw;
+  margin: 1vh;
+}
+.formside {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.inputForm {
+  width: 90%;
+}
+div.formstuff {
+  display: flex;
+}
+
+.options, .formstuff {
+  display: grid;
+  background-color: white;
+  height: auto;
+  padding: 1vw;
+  border-radius: 7%;
+  gap: 1vh;
+}
+.formstuff {
+  display: flex;
+  justify-content: space-around;
+}
+.optionbuttons:active {
+  background: transparent;
+}
+button {
+  background: transparent;
+  padding: 0.5vw;
+
+}
+.active {
+  background: rgba(237, 231, 225, 0.5);
+}
+.personalInfo, .jobForms, .eduForms {
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.jobForms, .eduForms {
+  gap: 0.7vw;
+}
+.personalInfo {
+  background: white;
   padding: 2vw;
 }
-.jobtitle, .edutitle {
-  background: rgba(0, 55, 111, 0.4);
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 1vh;
+textarea {
+  height: 60px;
+}
+h2 {
+  margin: 1vw;
+}
+form,.formtitle {
+  background: white;
+  padding: 1vw;
+}
+.formtitle {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+svg {
+  width:auto;
+  height: auto;
+}
+.jobLink, .eduLink {
+  width: 100%;
+  background: white;
+  text-align: left;
+}
+.JobsList, .EduList {
+  display: grid;
+  gap: 0.8vh;
+}
+section.panel {
+  background: white;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+section.panel>button {
+  text-align: center;
+  width: 100%;
+}
+.colorpicker {
+  background: white;
+  border-radius: 5%;
+  padding: 3vw;
+}
+.formstuff {
+  height: 8vh;
+}
+.fonts>button {
+  background: white;
+  padding: 1vw;
+  margin: 1vh;
+}
+.personalInfo, .jobForms, .eduForms, .cv, .options, .formstuff {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

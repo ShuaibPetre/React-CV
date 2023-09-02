@@ -11,7 +11,7 @@ dataKey,
         <label htmlFor={id}>
             <span className='labeltext'>{labelText}</span>
         </label>
-
+        <br />
     {type === "textarea" ? (
         <textarea
         id={id}

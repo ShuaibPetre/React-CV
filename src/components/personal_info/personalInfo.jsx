@@ -1,10 +1,11 @@
 import InputBuilder from "../InputBuilder";
+import { FaMale } from "react-icons/fa";
 
 export default function PersonalInfoForm({onChange, fullName, fullEmail, cellNumber, address}) {
   return (
     <>
     <div className="personalInfo">
-      <h2>Personal Info:</h2>
+      <h2><FaMale /> Personal Info:</h2>
       <InputBuilder
         type="text"
         id="fullName"

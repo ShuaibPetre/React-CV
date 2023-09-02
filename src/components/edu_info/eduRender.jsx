@@ -6,14 +6,18 @@ export default function ListEdu(props) {
       month: 'numeric',
     })
     const eduenddate = new Date(props.element.eduendDate);
-    const formattededuendDate = eduenddate.toLocaleString('en-US', {
+    const formattedEduendDate = eduenddate.toLocaleString('en-US', {
       timeZone: 'UTC',
       year: 'numeric',
       month: 'numeric',
     })
+    const EduFinalDate = () => {
+      if (props.element.eduendDate === "") return "current"
+      if (props.element.eduendDate !== "") return formattedEduendDate
+    }
     return  <div className="eduDiv"> 
       <div className="edusideinfo">
-        <div className="startDate">{formattededuDate} - {formattededuendDate}</div>
+        <div className="startDate">{formattededuDate} - <EduFinalDate /> </div>
         <div className="eduLocation">{props.element.eduLocation}</div>
       </div>
       <div className="edumaininfo">

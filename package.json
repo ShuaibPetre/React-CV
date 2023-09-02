@@ -10,15 +10,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-native-fontawesome": "^0.3.0",
     "moment": "^2.29.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-color": "^2.19.3",
+    "react-color-palette": "^7.0.4",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
+    "react-icons": "^4.10.1",
+    "react-native-svg": "^13.13.0",
     "react-phone-input-2": "^2.15.1",
     "uniqid": "^5.4.0",
     "uuid": "^9.0.0",
-    "uuidv4": "^6.2.13"
+    "uuidv4": "^6.2.13",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

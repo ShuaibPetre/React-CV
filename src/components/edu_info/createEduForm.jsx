@@ -1,16 +1,18 @@
-export default function EduInfoForm({onChange, eduName, eduQual, eduLocation, edustartDate, eduendDate, onSubmit, isActive, onShow}) {
+import { FaBusinessTime } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa";
+
+export default function EduInfoForm({onChange, eduName, eduQual, eduLocation, edustartDate, eduendDate, 
+  onSubmit, isActive, onShow, onEduReset, onRemove, formid, openForm, handleOpenForm}) {
     return (
       <>
       <div className="eduInfo">
-        <h2>Education Info:</h2>
-  
-        
         <section className="panel">
           {isActive ? (
               <div className="formdiv">
               <form 
               onSubmit={onSubmit}
-              id="jobForm"
+              id={formid}
               >
               <label>Institution Name:</label>
               <input
@@ -19,6 +21,7 @@ export default function EduInfoForm({onChange, eduName, eduQual, eduLocation, ed
                   value={eduName}
                   onChange={onChange}
                   data-key="eduName"
+                  required
               />
               <br />
               <label>Qualification:</label>
@@ -28,6 +31,7 @@ export default function EduInfoForm({onChange, eduName, eduQual, eduLocation, ed
                   value={eduQual}
                   onChange={onChange}
                   data-key="eduQual"
+                  required
               />
               <br />
               <label>Location:</label>
@@ -37,6 +41,7 @@ export default function EduInfoForm({onChange, eduName, eduQual, eduLocation, ed
                   value={eduLocation}
                   onChange={onChange}
                   data-key="eduLocation"
+                  required
               />
               <br />
               <label>Start Date:</label>
@@ -46,6 +51,7 @@ export default function EduInfoForm({onChange, eduName, eduQual, eduLocation, ed
                   value={edustartDate}
                   onChange={onChange}
                   data-key="edustartDate"
+                  required
               />
               <label>End Date:</label>
               <input
@@ -57,11 +63,13 @@ export default function EduInfoForm({onChange, eduName, eduQual, eduLocation, ed
               />
               <br />
               <button>Submit</button>
+              { (onRemove !== undefined) ? <button onClick={onRemove} data-key={formid}>Remove</button> : (null)}
+              <button onClick={onEduReset}>Cancel</button>
               </form>
             </div>
           ) : (
               <button onClick={onShow}>
-              Add Education Info
+              + Education
               </button>
         )}
       </section>

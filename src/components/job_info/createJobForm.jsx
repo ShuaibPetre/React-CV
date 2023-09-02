@@ -1,42 +1,47 @@
-export default function JobInfoForm({onChange, companyName, companyPosition, companyLocation, startDate, endDate, onSubmit, isActive, onShow}) {
+
+export default function JobInfoForm({onChange, companyName, companyPosition, companyLocation, startDate, endDate, addInfo,
+  onSubmit, isActive, onShow, onReset, formid, onRemove,}) {
   return (
     <>
     <div className="jobInfo">
-      <h2>Job Info:</h2>
-
-      
       <section className="panel">
         {isActive ? (
             <div className="formdiv">
             <form 
             onSubmit={onSubmit}
-            id="jobForm"
+            id={formid}
             >
             <label>Company Name:</label>
+            <br />
             <input
                 type="text"
                 id="companyName"
                 value={companyName}
                 onChange={onChange}
                 data-key="companyName"
+                required
             />
             <br />
             <label>Company Position:</label>
+            <br />
             <input
                 type="text"
                 id="companyPosition"
                 value={companyPosition}
                 onChange={onChange}
                 data-key="companyPosition"
+                required
             />
             <br />
             <label>Location:</label>
+            <br />
             <input
                 type="text"
                 id="companyLocation"
                 value={companyLocation}
                 onChange={onChange}
                 data-key="companyLocation"
+                required
             />
             <br />
             <label>Start Date:</label>
@@ -46,7 +51,9 @@ export default function JobInfoForm({onChange, companyName, companyPosition, com
                 value={startDate}
                 onChange={onChange}
                 data-key="startDate"
+                required
             />
+            <br />
             <label>End Date:</label>
             <input
                 type="date"
@@ -55,13 +62,23 @@ export default function JobInfoForm({onChange, companyName, companyPosition, com
                 onChange={onChange}
                 data-key="endDate"
             />
+            <label>Additional Info:</label>
+            <textarea
+                type="text"
+                id="addInfo"
+                value={addInfo}
+                onChange={onChange}
+                data-key="addInfo"
+            />
             <br />
             <button>Submit</button>
+            { (onRemove !== undefined) ? <button onClick={onRemove} data-key={formid}>Remove</button> : (null)}
+            <button onClick={onReset}>Cancel</button>
             </form>
           </div>
         ) : (
             <button onClick={onShow}>
-            Add Job Information
+            + Experience
             </button>
       )}
     </section>
