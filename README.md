@@ -2,8 +2,8 @@
 
 A responsive and customizable **React-based resume builder** that lets users create, preview, and download a clean CV layout. Built with modular components for personal info, work experience, and education — comes with styling and font editing.
 
-![screenshot](./screenshot1.png) 
-![screenshot](./screenshot2.png) 
+![screenshot](public/screenshot1.png) 
+![screenshot](public/screenshot2.png) 
 
 ## 🚀 Features
 
